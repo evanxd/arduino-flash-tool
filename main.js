@@ -13,13 +13,13 @@ app.on('ready', function(){
   tray = new Tray(__dirname + '/images/sensorweb-icon.png');
   tray.setToolTip('SensorWeb');
   tray.on('click', function(event, bounds) {
-    win.setPosition(bounds.x, bounds.y);
+    win.setPosition(bounds.x - 120, bounds.y + 30);
     win.isVisible() ? win.hide() : win.show();
   });
 
   win = new BrowserWindow({
     width: 270,
-    height: 190,
+    height: 270,
     resizable: false,
     show: false,
     frame: false
