@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/photon.min.css">
     <link rel="stylesheet" href="css/index.css">
+    <script src="./js/index.js"></script>
     <title>SensorWeb</title>
   </head>
   <body>
@@ -17,9 +18,9 @@
       </header>
 
       <form id="setup-sensor">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Wi-Fi SSID">
-        </div>
+        <select id="wifi-ssid" class="form-control">
+          <option disabled>Wi-Fi SSID</option>
+        </select>
         <div class="form-group">
           <input type="password" class="form-control" placeholder="Wi-Fi Password">
         </div>

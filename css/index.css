@@ -1,6 +1,8 @@
 #setup-sensor {
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 12px;
+  margin: 1.2rem auto 0.3rem auto;
   width: 92%;
+}
+
+#wifi-ssid {
+  margin-bottom: 0.7rem;
 }

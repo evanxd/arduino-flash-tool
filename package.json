@@ -17,6 +17,7 @@
   ],
   "main": "main.js",
   "dependencies": {
-    "particle-cli": "1.11.0"
+    "particle-cli": "1.11.0",
+    "wifiscanner": "0.0.10"
   }
 }
