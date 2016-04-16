@@ -1,7 +1,7 @@
 'use strict';
 
 (function(){
-  var wifiScanner = require("wifiscanner");
+  var wifiScanner = require('wifiscanner');
   var scanner = wifiScanner();
 
   scanner.scan(function(error, networks) {
