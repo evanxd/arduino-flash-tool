@@ -24,6 +24,8 @@ app.on('ready', function(){
     show: false,
     frame: false
   });
+  // Only for debugging.
+  // win.webContents.openDevTools({ detach: true });
   win.loadURL('file://' + __dirname + '/index.html');
 
   win.on('blur', function() {
