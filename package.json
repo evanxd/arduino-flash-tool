@@ -1,0 +1,22 @@
+{
+  "name": "sensorweb-desktop",
+  "description": "The SensorWeb desktop app.",
+  "version": "0.0.1",
+  "author": {
+    "name": "Evan Tseng",
+    "email": "evan@tseng.io"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/evanxd/sensorweb-desktop"
+  },
+  "keyword": [
+    "electron",
+    "sensorweb"
+  ],
+  "main": "main.js",
+  "dependencies": {
+    "particle-cli": "1.11.0"
+  }
+}
