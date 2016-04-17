@@ -8,13 +8,13 @@ var ejs = require('gulp-ejs');
 var unzip = require('gulp-unzip');
 
 function Setup() {
-  gulp.task('download', function() {
+  gulp.task('download', () => {
     return download(config.firmware)
       .pipe(unzip())
       .pipe(gulp.dest('./firmware/'));
   });
 
-  gulp.task('sensorweb-config', function() {
+  gulp.task('sensorweb-config', () => {
     return gulp.src('./templates/SensorWebConfig.h')
       .pipe(ejs({
         sensorId: this._sensorId || 'sensorId',
@@ -25,7 +25,7 @@ function Setup() {
       }, { ext: '.h' }))
       .pipe(gulp.dest('./firmware/arduino-station-master/station/' +
                       'particle-photon'));
-  }.bind(this));
+  });
 }
 
 Setup.prototype = {
