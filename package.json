@@ -18,6 +18,7 @@
   "main": "main.js",
   "dependencies": {
     "gulp": "3.9.1",
+    "gulp-clean": "0.3.2",
     "gulp-download": "0.0.1",
     "gulp-ejs": "2.1.1",
     "gulp-shell": "0.5.2",
