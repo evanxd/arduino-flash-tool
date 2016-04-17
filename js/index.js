@@ -1,8 +1,12 @@
+/* global Setup */
+
 'use strict';
 
 (function(){
   var wifiScanner = require('wifiscanner');
+  var setup = require('./js/setup');
   var scanner = wifiScanner();
+  var setupButton = document.querySelector('#setup');
 
   scanner.scan(function(error, networks) {
     if (error) {
@@ -21,4 +25,8 @@
       });
     }
   });
-})();
+
+  setupButton.addEventListener('click', function() {
+    setup.flash();
+  });
+}());
