@@ -27,6 +27,11 @@
   });
 
   setupButton.addEventListener('click', function() {
-    setup.flash();
+    var sensorId = document.querySelector('#sensor-id').value;
+    var apiKey = document.querySelector('#api-key').value;
+    setup.flash({
+      sensorId: sensorId,
+      apiKey: apiKey
+    });
   });
 }());
