@@ -34,7 +34,7 @@ function Setup() {
     './firmware/arduino-station-master/station/particle-photon/'
   ]));
 
-  gulp.task('remove-firmware', function () {
+  gulp.task('remove-firmware', () => {
     return gulp.src('./firmware/', { read: false })
       .pipe(clean());
   });
