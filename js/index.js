@@ -1,5 +1,3 @@
-/* global Setup */
-
 'use strict';
 
 (function(){
