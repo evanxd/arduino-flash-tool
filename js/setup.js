@@ -2,10 +2,11 @@
 
 var config = require('../config');
 var gulp = require('gulp');
-var runSequence = require('run-sequence');
 var download = require('gulp-download');
 var ejs = require('gulp-ejs');
+var shell = require('gulp-shell');
 var unzip = require('gulp-unzip');
+var runSequence = require('run-sequence');
 
 function Setup() {
   gulp.task('download', () => {
@@ -26,6 +27,11 @@ function Setup() {
       .pipe(gulp.dest('./firmware/arduino-station-master/station/' +
                       'particle-photon'));
   });
+
+  gulp.task('flash', shell.task([
+    './node_modules/.bin/particle flash sensorweb-station ' +
+    './firmware/arduino-station-master/station/particle-photon/'
+  ]));
 }
 
 Setup.prototype = {
@@ -35,7 +41,7 @@ Setup.prototype = {
   flash: function(sensorwebConfig) {
     this._sensorId = sensorwebConfig.sensorId;
     this._apiKey = sensorwebConfig.apiKey;
-    runSequence('download', 'sensorweb-config');
+    runSequence('download', 'sensorweb-config', 'flash');
   }
 };
 

@@ -20,6 +20,7 @@
     "gulp": "3.9.1",
     "gulp-download": "0.0.1",
     "gulp-ejs": "2.1.1",
+    "gulp-shell": "0.5.2",
     "gulp-unzip": "0.1.4",
     "particle-cli": "1.11.0",
     "run-sequence": "1.1.5",
