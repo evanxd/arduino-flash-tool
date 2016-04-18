@@ -1,10 +1,13 @@
 'use strict';
 
 (function(){
+  var remote = require('electron').remote;
   var wifiScanner = require('wifiscanner');
   var setup = require('./js/setup');
+  var app = remote.app;
   var scanner = wifiScanner();
   var setupButton = document.querySelector('#setup');
+  var quitButton = document.querySelector('#quit');
 
   scanner.scan(function(error, networks) {
     if (error) {
@@ -31,5 +34,9 @@
       sensorId: sensorId,
       apiKey: apiKey
     });
+  });
+
+  quitButton.addEventListener('click', function() {
+    app.quit();
   });
 }());
