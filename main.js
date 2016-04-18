@@ -1,5 +1,6 @@
 'use strict';
 
+var config = require('./config');
 var electron = require('electron');
 var Tray = electron.Tray;
 var BrowserWindow = electron.BrowserWindow;
@@ -23,8 +24,7 @@ app.on('ready', function(){
     show: false,
     frame: false
   });
-  // Only for debugging.
-  // win.webContents.openDevTools({ detach: true });
+  config.debug && win.webContents.openDevTools({ detach: true });
   win.loadURL('file://' + __dirname + '/index.html');
 
   win.on('blur', function() {
