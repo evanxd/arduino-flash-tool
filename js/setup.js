@@ -21,9 +21,9 @@ function Setup() {
       .pipe(ejs({
         sensorId: this._sensorId || 'sensorId',
         apiKey: this._apiKey || 'apiKey',
-        serverAddress: '127.0.0.1',
-        serverPort: '3000',
-        samplingRate: '5000'
+        serverAddress: 'api.sensorweb.io',
+        serverPort: '80',
+        samplingRate: '60000'
       }, { ext: '.h' }))
       .pipe(gulp.dest('./firmware/arduino-station-master/station/' +
                       'particle-photon'));
