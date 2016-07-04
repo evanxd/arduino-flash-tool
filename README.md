@@ -1,2 +1,2 @@
-#SensorWeb Desktop
-The SensorWeb desktop app.
+# Arduino Flash Tool
+Arduino's flash tool.
